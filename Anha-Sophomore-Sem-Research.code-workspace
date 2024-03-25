@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Downloads/Templates"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Anha-Sophomore-Sem-Research"
+	}
+}
