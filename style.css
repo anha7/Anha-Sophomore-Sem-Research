@@ -1,0 +1,150 @@
+/* 
+
+  Colors: 
+    Header/Footer Color: #f1ceaa
+    Map: #e4d5c9
+    Darker Shade: #c29e78
+    Lighter Shade: #ffdbb7
+    Dark Shade: #58534daa;
+    nav: #715e4e
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+body {
+    background-image: url("./assets/temp-MD.png");
+    background-size: cover;
+    background-color: #c29e78;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    font-family: "Lora";
+}
+
+h4, h5, h6 {
+    font-family: "Lora";
+}
+
+p {
+    font-family: "Lora";
+}
+
+article {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+#title1, #title2, #title3, #title4, #author {
+    opacity: 0;
+    text-align: center;
+}
+
+#title1 {
+    transition: opacity 1s;
+}
+
+#title2 {
+    transition: opacity 2s;
+}
+
+#title3 {
+    transition: opacity 3s;
+}
+
+#title4 {
+    transition: opacity 4s;
+}
+
+#author {
+    transition: opacity 7s;
+}
+
+.opacity {
+    opacity: 1!important;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f1ceaa;
+    padding: 3vh;
+    gap: 1rem;
+}
+
+footer div {
+    text-align: center;
+    line-height: 200%;
+}
+
+main {
+    background-color: #c29e78;
+    border-top: 2px solid #f1ceaaaa; 
+    /* height: 800px; */
+    width: 100%;
+}
+
+.map {
+    width: 100vw;
+    /* margin: 0 auto;
+    background-color:  white; */
+}
+
+.map img {
+    width: 100%;
+}
+
+.map-legend {
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    body {
+        background-size: cover!important;
+    }
+
+    #title1, #title2, #title3, #title4, #author {
+        margin-left: 25px;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 8vw;
+        letter-spacing: 0.6;
+    }
+
+    h3 {
+        font-size: 6.5vw;
+    }
+
+    h4 {
+        margin-top: 10px;
+        font-size: 2.5vw;
+    }
+
+    h5 {
+        font-size: 2vw;
+    }
+
+    h6 {
+        font-size: 1.5vw;
+    }
+
+    main {
+        background-color: #c29e78;
+        border-top: 2px solid #f1ceaaaa; 
+        width: 100%;
+    }
+
+
+
+}

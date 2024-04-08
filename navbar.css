@@ -11,10 +11,10 @@ body {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0.5rem 1.25rem;
-    background-color: white;
+    background-color: #f1ceaa;
     box-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid #666;
     z-index: 3;
@@ -23,19 +23,20 @@ body {
     top: 0;
 }
 
-#left-top-nav {
+#left-top-nav, #center-top-nav {
     display: flex;
 }
 
-#left-top-nav a {
+#top-nav a {
     color: black;
     text-decoration: none;
 }
 
 .project-name {
-    font-family: franklin-gothic-urw, "Franklin Gothic Book", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
+    /* font-family: franklin-gothic-urw, "Franklin Gothic Book", sans-serif; */
+    font-family: minion-pro, "Minion Pro", serif;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 #nav-links {
@@ -83,10 +84,30 @@ article {
     font-family: 'Font Awesome 5 Free', serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(113, 94, 78);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 @media screen and (max-width: 600px) {
     #top-nav {
         display: grid;
-        grid-template-columns: 1% 99%;
+        grid-template-columns: 100%;
         justify-items: center;
         margin-left: auto;
         margin-right: auto;
@@ -94,7 +115,7 @@ article {
     }
 
     #menu-icon {
-        display: block;
+        display: none;
         justify-self: start;
         font-size: 1.25rem;
         padding: .25rem .75rem;
@@ -117,5 +138,6 @@ article {
         flex-direction: column;
         gap: 10px;
         justify-content: center;
+        display: none;
     }
 }
