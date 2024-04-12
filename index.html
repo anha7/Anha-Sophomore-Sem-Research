@@ -83,18 +83,259 @@
                 <h4 id="author">By: Anha Khan</h4>
             </div>
         </header>
-    
 
-        <!-- <main>
-            <aside class="map-legend"></aside>
-            <div class="map">
-                <img id="myimage" class="map-full" src="./assets/base-map.png">
+        <!-- Before the map -->
+        <section class="part1">
+           <div class="article-part1">
+                <p>Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem
+                Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsemorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem <br> Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem
+                Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem </p>
             </div>
-        </main> -->
+        </section>
 
-        <footer style="border-top: 2px solid #58534daa;">
+        <!-- Map -->
+        <main>
+            <aside class="map-selectors">
+                <h6>Category Selection</h6>
+                <div class="all-selectors">
+                    <div class="selector-container">
+                        <div>
+                            <input type="checkbox" id="has_acceptable_door_width" name="acceptableDoorWidth" value="acceptableDoorWidth">
+                            <label for="acceptableDoorWidth">Potential Spaces Have Accessible Door Widths</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_ramps_and_elevators" name="rampsElevators" value="rampsElevators">
+                            <label for="rampsElevators">Building Has Ramps and Elevators</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_automated_entrances" name="automatedEntrances" value="automatedEntrances">
+                            <label for="automatedEntrances">Building Has Automated Entrances</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="potential_affinity_spaces_have_automated_doors" name="automatedDoorsWithin" value="automatedDoorsWithin">
+                            <label for="automatedDoorsWithin">Potential Spaces Have Automated Doors</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_braille_signage" name="brailleSignage" value="brailleSignage">
+                            <label for="brailleSignage">Potential Spaces Have Braille Signage</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_space_for_group_gathering" name="groupGatheringSpace" value="groupGatheringSpace">
+                            <label for="groupGatheringSpace">Potential Spaces Have Space for Group Gathering</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_adjustable_lighting" name="adjustableLighting" value="adjustableLighting">
+                            <label for="adjustableLighting">Potential Spaces Have Adjustable Lighting</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_openable_windows" name="openableWindows" value="openableWindows">
+                            <label for="openableWindows">Potential Spaces Have Openable Windows</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_exterior_windows" name="exteriorWindows" value="exteriorWindows">
+                            <label for="exteriorWindows">Potential Spaces Have Exterior Windows</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="has_nearby_water_source" name="nearbyWaterSource" value="nearbyWaterSource">
+                            <label for="nearbyWaterSource">Potential Spaces Have Nearby Water Sources</label>
+                        </div>
+                    </div>
+
+                    <div class="whole-maps">
+                        <div>
+                            <input type="checkbox" id="number_of_potential_affinity_spaces_per_building" name="numberOfSpaces" value="numberOfSpaces">
+                            <label for="numberOfSpaces">Number of Potential Affinity Spaces per Building</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="maximum_capacity_of_biggest_potential_affinity_space_per_building" name="maxCapacity" value="maxCapacity">
+                            <label for="maxCapacity">Maximum Capacity of Biggest Potential Affinity Space per Building</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="number_of_categories_fulfilled_per_building" name="numCategoriesFulfilled" value="numCategoriesFulfilled">
+                            <label for="numCategoriesFulfilled">Number of Categories Fulfilled per Building</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <div class="map" id="mapContainer">
+                <div class="legend" id="legend">
+                    <h6>Legend</h6>
+                    <div class="legend-items">
+                        <div class="simple">
+                            <span class="legend-yes"></span>
+                            <p>Yes</p>
+                        </div>
+                        <div class="simple">
+                            <span class="legend-no"></span>
+                            <p>No</p>
+                        </div>
+                        <div class="spectrum legend-affinity" id="number_of_potential_affinity_spaces_per_building">
+                            <span></span>
+                            <p>0-4</p>
+                            <span></span>
+                            <p>5-9</p>
+                            <span></span>
+                            <p>10-14</p>
+                            <span></span>
+                            <p>15-19</p>
+                            <span></span>
+                            <p>20-24</p>
+                            <span></span>
+                            <p>25-29</p>
+                            <span></span>
+                            <p>30-35</p>
+                        </div>
+
+                        <div class="spectrum legend-categories" id="number_of_categories_fulfilled_per_building">
+                            <span></span>
+                            <p>0-2</p>
+                            <span></span>
+                            <p>3-5</p>
+                            <span></span>
+                            <p>6-8</p>
+                            <span></span>
+                            <p>9-10</p>
+                        </div>
+
+                        <div class="spectrum legend-capacity" id="maximum_capacity_of_biggest_potential_affinity_space_per_building">
+                            <span></span>
+                            <p>0-9</p>
+                            <span></span>
+                            <p>10-19</p>
+                            <span></span>
+                            <p>20-29</p>
+                            <span></span>
+                            <p>30-39</p>
+                            <span></span>
+                            <p>40-49</p>
+                            <span></span>
+                            <p>50-59</p>
+                            <span></span>
+                            <p>60-69</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="mapCombined">
+                    <img id="myimage" class="map-full" usemap="#campusMap" src="./assets/base-map.png"/>
+                    <img class="map-full map-hide" src="./assets/full-maps/checked-categories-map.png"/>
+                    <img class="map-full map-hide" src="./assets/full-maps/number-affinity-spaces-map.png"/>
+                    <img class="map-full map-hide" src="./assets/full-maps/room-capacity-map.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/architecture-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/architecture-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/bendheim-house-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/bendheim-house-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/bowen-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/bowen-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/burr-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/burr-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/corwin-bendheim-fisher-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/corwin-bendheim-fisher-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/east-pyne-chancellor-green-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/east-pyne-chancellor-green-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/equad-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/equad-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/fine-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/fine-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/forbes-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/forbes-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/frick-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/frick-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/friend-cs-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/friend-cs-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/frist-jones-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/frist-jones-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/green-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/green-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/guyot-moffett-schultz-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/guyot-moffett-schultz-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/henry-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/henry-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/icahn-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/icahn-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/jadwin-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/jadwin-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/jrr-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/jrr-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/laura-wooten-1879-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/laura-wooten-1879-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/lewis-center-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/lewis-center-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/lewis-library-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/lewis-library-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/lewis-thomas-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/lewis-thomas-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/maeder-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/maeder-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/mathey-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/mathey-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/mccosh-dickinson-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/mccosh-dickinson-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/mcdonnell-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/mcdonnell-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/ncw-yeh-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/ncw-yeh-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/new-south-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/new-south-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/pni-peretsmanscully-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/pni-peretsmanscully-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/robertson-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/robertson-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/rocky-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/rocky-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/scheide-caldwell-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/scheide-caldwell-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/sherrerd-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/sherrerd-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/wallace-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/wallace-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/whitman-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/whitman-no.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/woolworth-yes.png"/>
+                    <img class="map-full map-hide" src="./assets/yes-no-maps/woolworth-no.png"/>
+                    <img id="map-outline" class="map-full" src="./assets/map-outline.png"/>
+                    <!-- <div class="magnify-glass"> -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Mappings for clickable areas -->
+        <map name="campusMap">
+            <area target="" alt="Rockefeller" title="Rockefeller" href="./mygod.com" target="_blank" coords="956,134,769,12" shape="rect">
+            <area target="" alt="Mathey" title="Mathey" href="" coords="767,140,968,286" shape="rect">
+            <area target="" alt="Henry House" title="Henry House" href="" coords="1127,24,1210,87" shape="rect">
+            <area target="" alt="Scheide Caldwell House" title="Scheide Caldwell House" href="" coords="1226,26,1326,83" shape="rect">
+            <area target="" alt="Chancellor Green" title="Chancellor Green" href="" coords="1169,98,1334,152" shape="rect">
+            <area target="" alt="East Pine" title="East Pine" href="" coords="1169,158,1259,232" shape="rect">
+            <area target="" alt="Burr" title="Burr" href="" coords="1421,0,1496,61" shape="rect">
+            <area target="" alt="Green" title="Green" href="" coords="1604,73,1503,128" shape="rect">
+            <area target="" alt="JRR" title="JRR" href="" coords="1442,130,1578,195" shape="rect">
+            <area target="" alt="Dickenson" title="Dickenson" href="" coords="1336,197,1452,250" shape="rect">
+        </map>
+
+        <!-- After the map -->
+        <section class="part2">
+            <div class="article-part2">
+                <p>Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem
+                Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsemorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem <br> Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem
+                Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem Lorem Ipsem </p>
+            </div>
+        </section>
+
+        <!-- Credits -->
+        <footer>
             <div>
-                <h6>Web Development and Graphic Design</h6>
+                <h6>Data | Graphic Design | Web Development</h6>
                 <p>Anha Khan</p>
             </div>
             <div>
@@ -104,11 +345,13 @@
             <div>
                 <h6>Special Thanks</h6>
                 <p>Laiba Ali</p>
+                <p>Reverend Alison Boden</p>
                 <p>Sharv Dave</p>
                 <p>Raphi Gold</p>
                 <p>Arika Hassan</p>
                 <p>Dr. Emma Ljung</p>
                 <p>Ixtle Montuffar</p>
+                <p>WRI 220/1 Peers</p>
             </div>
         </footer>
 
