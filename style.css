@@ -75,7 +75,7 @@ p {
 
 
 /* Initial opacity settings for titles and author */
-#title1, #title2, #title3, #title4, #author {
+#title1, #title2, #title3, #author {
     opacity: 0; /* Initially set to fully transparent */
     text-align: center; /* Center align */
     margin-bottom: 5px; /* Add spacing at bottom */
@@ -84,23 +84,19 @@ p {
 
 /* Title animation */
 #title1 {
-    transition: opacity 1s; /* Smooth transition for opacity change */
-}
-
-#title2 {
-    transition: opacity 2s; /* Smooth transition for opacity change */
-}
-
-#title3 {
     transition: opacity 3s; /* Smooth transition for opacity change */
 }
 
-#title4 {
-    transition: opacity 4s; /* Smooth transition for opacity change */
+#title2 {
+    transition: opacity 6s; /* Smooth transition for opacity change */
+}
+
+#title3 {
+    transition: opacity 9s; /* Smooth transition for opacity change */
 }
 
 #author {
-    transition: opacity 6s; /* Smooth transition for opacity change */
+    transition: opacity 12s; /* Smooth transition for opacity change */
 }
 
 .opacity {
@@ -121,6 +117,10 @@ footer {
 footer div {
     text-align: center; /* Center align */
     line-height: 200%; /* Set line height */
+}
+
+.new-class {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5); /* Add box shadow */
 }
 
 /* Main Section Styling */
@@ -265,7 +265,7 @@ main {
 .map {
     position: relative; /* Relative positioning */
     width: 100%; /* Full width */
-    overflow: hidden; /* Hide overflowing content */
+    overflow: scroll; /* Hide overflowing content */
     aspect-ratio: 1 / 1; /* Aspect ratio */
     background-color: #e7d4c7; /* Background color */
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5); /* Box shadow */
@@ -348,38 +348,31 @@ label {
 }
 
 /* Styles for part1 */
-.part1 {
+.part {
     background-color: #c29e78; /* Background color */
     padding: 5% 2vh 0; /* Padding */
+}
+
+.part:first-child {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5); /* Box shadow */
 }
 
+.last-part {
+    padding-top: 0px;
+    padding-bottom: 75px;
+}
+
 /* Styles for article-part1 */
-.article-part1 {
+.article-part1, .article-part2, .article-part3, .article-part4 {
     margin: 0 auto; /* Center horizontally */
     width: 85%; /* Width */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Styles for paragraphs inside article-part1 */
-.article-part1 p {
-    line-height: 150%; /* Line height */
-    font-family: "Lora"; /* Font family */
-}
-
-/* Styles for part2 */
-.part2 {
-    background-color: #c29e78; /* Background color */
-    padding: 0 2vh 5%; /* Padding */
-}
-
-/* Styles for article-part2 */
-.article-part2 {
-    margin: 0 auto; /* Center horizontally */
-    width: 85%; /* Width */
-}
-
-/* Styles for paragraphs inside article-part2 */
-.article-part2 p {
+.article-part1 p, .article-part2 p, .article-part3 p, .article-part4 p {
     line-height: 150%; /* Line height */
     font-family: "Lora"; /* Font family */
 }
@@ -387,6 +380,27 @@ label {
 /* Map Hide Styles */
 .map-hide {
     display: none; /* Hide element */
+}
+
+.article-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    row-gap: 5px;
+}
+
+.article-places {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    column-gap: 2%;
+    width: 96%;
+}
+
+.article-places img, .article-table img {
+    width: 100%;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Media Query for Screens Larger than 1000px */
@@ -408,7 +422,6 @@ label {
     #title1,
     #title2,
     #title3,
-    #title4,
     #author {
         margin-left: 25px; /* Left margin */
         text-align: left; /* Align text to left */
@@ -475,5 +488,18 @@ label {
         width: 170%; /* Full width */
         height: 170%; /* Full height */
 
+    }
+
+    
+    .article-table {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0% auto;
+        width: 80%;
+    }
+
+    .article-places {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
