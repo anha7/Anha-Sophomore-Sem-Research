@@ -14,9 +14,9 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0.5rem 1.25rem;
-    background-color: #f1ceaa;
+    background-color: #fff;
     box-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid #666;
+    /* border-bottom: 1px solid #666; */
     z-index: 3;
     width: 100%;
     position: fixed;
@@ -25,6 +25,7 @@ body {
 
 #left-top-nav, #center-top-nav {
     display: flex;
+    align-items: center;
 }
 
 #top-nav a {
@@ -33,10 +34,10 @@ body {
 }
 
 .project-name {
-    /* font-family: franklin-gothic-urw, "Franklin Gothic Book", sans-serif; */
-    font-family: minion-pro, "Minion Pro", serif;
-    font-weight: 400;
-    font-size: 20px;
+    font-family: franklin-gothic-urw, "Franklin Gothic Book", sans-serif;
+    /* font-family: minion-pro, "Minion Pro", serif; */
+    font-weight: 500;
+    font-size: 18px;
 }
 
 #nav-links {
