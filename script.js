@@ -65,20 +65,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function updateMapPosition() {
-
         if (window.innerWidth <= 600) {                
             if (translateX > 100) {
                 translateX = 95;
             }
-            
             if (translateX < -1000) {
                 translateX = -995;
             }
-            
             if (translateY > 100) {
                 translateY = 95;
             }
-            
             if (translateY < -236) {
                 translateY = -235;
             }
@@ -87,15 +83,12 @@ document.addEventListener("DOMContentLoaded", function() {
             if (translateX > 100) {
                 translateX = 95;
             }
-            
             if (translateX < -1000) {
                 translateX = -995;
             }
-            
             if (translateY > 100) {
                 translateY = 95;
             }
-            
             if (translateY < -400) {
                 translateY = -399;
             }
@@ -104,15 +97,12 @@ document.addEventListener("DOMContentLoaded", function() {
             if (translateX > 100) {
                 translateX = 95;
             }
-            
             if (translateX < -1400) {
                 translateX = -1395;
             }
-            
             if (translateY > 100) {
                 translateY = 95;
             }
-            
             if (translateY < -500) {
                 translateY = -499;
             }
@@ -306,12 +296,10 @@ document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     });
 });
 
+// Functionality for the map legend
 function updateLegend(type) {
-
     let legendFullMaps = document.getElementsByClassName("spectrum");
     let legendIdvMaps = document.getElementsByClassName("simple");
-    
-
 
     for (let cat of legendIdvMaps) {
         if (type === true) {
