@@ -7,6 +7,7 @@ const author = document.getElementById("author");
 const legend = document.getElementById("legend");
 const mapContainer = document.getElementById('mapContainer');
 const mapCombined = document.getElementById('mapCombined');
+
 // Run animation on title sequences
 openAnim();
 
