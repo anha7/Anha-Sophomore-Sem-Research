@@ -375,7 +375,6 @@ label {
     margin: 0 auto;
     width: 85%;
     display: flex;
-    align-items: center;
     flex-direction: column;
     max-width: 1000px;
 }
